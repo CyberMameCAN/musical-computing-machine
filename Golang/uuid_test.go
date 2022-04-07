@@ -20,12 +20,12 @@ func main() {
 	// panic on error
 	var err error
 	u1 := uuid.Must(uuid.NewV4(), err) /* case go.uuid */
-	//u1 := uuid.Must(uuid.NewV4(), err)   /* case google/uuid */
+	//u1 := uuid.Must(uuid.New(), err)   /* case google/uuid */
 	fmt.Printf("UUIDv4: %s\n", u1)
 
 	// or error handling
 	u2 := uuid.NewV4() /* case go.uuid */
-	//u2 := uuid.NewV4()   /* case google/uuid */
+	//u2 := uuid.New()   /* case google/uuid */
 	if err != nil {
 		fmt.Printf("Something went wrong: %s", err)
 		return
